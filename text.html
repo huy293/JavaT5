@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Phim hentai</title>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand">Navbar</a>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+          <div>
+            <form><button class="btn btn-outline-success" type="submit">Login</button></form>
+            <form><button class="btn btn-outline-success" type="submit">Sign up</button></form>
+          </div>          
+        </div>
+    </nav>
+    <div class="container">
+        
+        <!-- /Fullbanner -->
+        <!-- Main content -->
+
+       
+        <div class="list-movie-filter" style="margin-bottom: 10px;" id="list-movie-filter">			
+		<script data-cfasync="false" type="text/javascript">
+			$(document).ready(function() {
+				$('#filter-category').multiselect({
+					onChange: function(option, checked) {
+						// Get selected options.
+						var selectedOptions = $('#filter-category option:selected');
+								
+						if (selectedOptions.length >= 3) {
+							// Disable all other checkboxes.
+							var nonSelectedOptions = $('#filter-category option').filter(function() {
+							return !$(this).is(':selected');
+							});
+								
+							nonSelectedOptions.each(function() {
+								var input = $('input[value="' + $(this).val() + '"]');
+								input.prop('disabled', true);
+								input.parent('li').addClass('disabled');
+							});
+						}
+						else {
+							// Enable all checkboxes.
+							$('#filter-category option').each(function() {
+							var input = $('input[value="' + $(this).val() + '"]');
+							input.prop('disabled', false);
+							input.parent('li').addClass('disabled');
+							});
+						}
+					}
+				});
+			});
+		</script>					
+
+			<div class="list-movie-filter-main">
+                <form id="form-filter" class="form-inline" method="GET" action="">
+                    
+                    <div class="list-movie-filter-item">
+                        <label for="filter-eptype">Tiến độ</label>
+                        <select class="form-control" id="filter-eptype" name="status">
+										<option value="">Tất cả</option>
+									<option value="complete">Hoàn thành</option>
+                                    <option value="ongoing">Chưa xong</option>
+                                    
+                                    
+									</select>
+                    </div>
+					
+                    <div class="list-movie-filter-item">
+                        <label for="filter-category">Thể loại</label>
+                        	
+						<span class="multiselect-native-select">
+							<select style="margin-top: 5px;" class="multiselect-native-select" id="filter-category" name="genres" multiple="multiple">
+                                <option value="38">Đời Thường</option>
+								<option value="36">Harem</option>
+								<option value="35">Shounen</option>
+								<option value="33">Học Đường</option>
+								<option value="32">Thể Thao</option>
+								<option value="31">Drama</option>
+								<option value="30">Trinh Thám</option>
+								<option value="29">Kinh Dị</option>
+								<option value="28"> Mecha</option>
+								<option value="27">Phép Thuật</option>
+								<option value="26">Phiêu Lưu</option>
+								<option value="25">Ecchi</option>
+								<option value="24">Hài Hước</option>
+								<option value="23">Hành Động</option>
+								<option value="40">Romance</option>
+								<option value="41">Lịch Sử</option>
+								<option value="42">Âm Nhạc</option>
+								<option value="43">Tokusatsu</option>
+								<option value="44">Viễn Tưởng</option>
+								<option value="45">Fantasy</option>
+								<option value="46">Blu-ray</option>
+								<option value="48">Game</option>
+								<option value="49">Shoujo</option>
+								<option value="50">Seinen</option>
+								<option value="51">Super Power</option>
+								<option value="52">Space</option>
+								<option value="53"> Martial Arts</option>
+								<option value="54">Siêu Nhiên</option>
+								<option value="55">Vampire</option>
+								<option value="56"> Mystery</option>
+								<option value="57">Psychological</option>
+								<option value="58">Yuri</option>
+								<option value="59">Shounen Ai</option>
+								<option value="60">Shoujo Ai</option>
+								<option value="61">Josei</option>
+								<option value="62">Parody</option>
+								<option value="63">Coming of Age</option>
+								<option value="64">Tragedy</option>
+								<option value="65">Demons</option>
+								<option value="66">Car</option>
+								<option value="67">Dementia</option>
+								<option value="68">Hentai</option>
+								<option value="69">Kid</option>
+								<option value="70">Military</option>
+								<option value="71">Police</option>
+								<option value="72">Samurai</option>
+								<option value="73">Thriller</option>
+								<option value="74">Yaoi</option>
+								<option value="75">Hoạt hình Trung Quốc</option>
+								<option value="76">Xuyên Không - Chuyển Kiếp</option>
+								<option value="77">Avant Garde</option>
+								<option value="78">Award Winning</option>
+								<option value="79">Suspense</option>
+								<option value="80">Adult Cast</option>
+								<option value="81">Anthropomorphic</option>
+								<option value="82">CGDCT</option>
+								<option value="83">Crossdressing</option>
+								<option value="84">Y Tế</option>
+								<option value="85">Mythology</option>
+								<option value="86">Sinh tồn</option>
+								<option value="87">Tội phạm</option>
+								<option value="88">Biến đổi giới tính</option>
+								<option value="89">Otaku</option>
+								<option value="90">Thú cưng</option>
+								<option value="91">Bẩn bựa</option>
+								<option value="92">Máu me</option>
+								<option value="93">Ẩm thực</option>
+								<option value="94">Love Polygon</option>
+								<option value="95">Visual Arts</option>																
+                                
+                    		</select>
+							<div style="margin-top: 5px;" class="btn-group">
+								<button type="button" class="multiselect dropdown-toggle form-control selectpicker" data-toggle="dropdown" title="Genres">
+									<span class="multiselect-selected-text">Genres</span>
+									<b class="caret"></b>
+								</button>
+								<ul class="multiselect-container dropdown-menu">
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="38"> Đời Thường</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="36"> Harem</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="35"> Shounen</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="33"> Học Đường</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="32"> Thể Thao</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="31"> Drama</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="30"> Trinh Thám</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="29"> Kinh Dị</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="28">  Mecha</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="27"> Phép Thuật</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="26"> Phiêu Lưu</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="25"> Ecchi</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="24"> Hài Hước</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="23"> Hành Động</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="40"> Romance</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="41"> Lịch Sử</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="42"> Âm Nhạc</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="43"> Tokusatsu</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="44"> Viễn Tưởng</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="45"> Fantasy</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="46"> Blu-ray</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="48"> Game</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="49"> Shoujo</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="50"> Seinen</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="51"> Super Power</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="52"> Space</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="53">  Martial Arts</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="54"> Siêu Nhiên</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="55"> Vampire</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="56">  Mystery</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="57"> Psychological</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="58"> Yuri</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="59"> Shounen Ai</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="60"> Shoujo Ai</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="61"> Josei</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="62"> Parody</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="63"> Coming of Age</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="64"> Tragedy</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="65"> Demons</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="66"> Car</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="67"> Dementia</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="68"> Hentai</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="69"> Kid</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="70"> Military</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="71"> Police</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="72"> Samurai</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="73"> Thriller</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="74"> Yaoi</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="75"> Hoạt hình Trung Quốc</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="76"> Xuyên Không - Chuyển Kiếp</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="77"> Avant Garde</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="78"> Award Winning</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="79"> Suspense</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="80"> Adult Cast</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="81"> Anthropomorphic</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="82"> CGDCT</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="83"> Crossdressing</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="84"> Y Tế</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="85"> Mythology</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="86"> Sinh tồn</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="87"> Tội phạm</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="88"> Biến đổi giới tính</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="89"> Otaku</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="90"> Thú cưng</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="91"> Bẩn bựa</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="92"> Máu me</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="93"> Ẩm thực</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="94"> Love Polygon</label></a></li>
+									<li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="95"> Visual Arts</label></a></li>
+								</ul>
+							</div>
+						</span>
+							
+					</div>
+                    <div class="list-movie-filter-item">
+                        <label for="filter-country">Theo mùa</label>
+                        <select class="form-control" id="filter-country" name="season">
+										<option value="">Tất cả</option>										                                   
+									<option value="5">Xuân</option>
+									<option value="6">Hạ</option>
+									<option value="7">Thu</option>
+									<option value="4">Đông</option>
+                                   	
+										
+									</select>
+                    </div>
+                    <div class="list-movie-filter-item">
+                        <label for="filter-year">Năm phát hành</label>
+                        <select id="filter-year" name="year" class="form-control">
+							<option value="">Tất cả</option>
+							<option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                        </select>
+                    </div>
+					<div class="list-movie-filter-item">
+                        <label for="filter-sort">Sắp xếp</label>
+                        <select class="form-control" id="filter-sort" name="sort">
+						<option value="popular">Lượt xem</option>
+						<option value="comment">Bình luận</option>
+						<option value="year">Năm</option>
+					</select>
+                    </div>
+                    <button type="submit" id="btn-movie-filter" class="btn btn-blue btn-filter-movie"><span>Search</span></button>
+                    <div class="clear"></div>
+                </form>
+            </div>
+        
+</div>
+        <div class="row">
+            <!-- slider -->
+            
+            <div class="col-lg-8">
+                
+                <div class="movie-list-index home-v2">
+                    
+
+                    <!-- phia tren + phia duoi ben trai -->
+                    <ul class="last-film-box" id="movie-last-movie">
+							
+                            								
+							<li>
+                                <div class="movie-item m-block"><a title="Kanojo mo Kanojo Season 2 -  Kanokano-|-カノジョも彼女-Season-2-|-Girlfriend,-Girlfriend-Season-2 - " href="./phim/kanojo-mo-kanojo-season-2/m9152.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/RDeXgyn.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Kanojo mo Kanojo Season 2</div><span class="fbcom-left">5</span><span class="viewed-right">36000 </span><span class="ribbon">04/??</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Yuru Camp Live Action SS2 -  Yuru-Camp-Live-Action-SS2 - " href="./phim/yuru-camp-live-action-ss2/m9138.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://cdn.animenewsnetwork.com/thumbnails/max650x650/cms/news.4/166018/laid-back-camp-season-2.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Yuru Camp Live Action SS2</div><span class="fbcom-left">1</span><span class="viewed-right">30765 </span><span class="ribbon">10/12</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="GOTOUBUN NO HANAYOME SPECIAL -  GOTOUBUN-NO-HANAYOME-SPECIAL - " href="./phim/gotoubun-no-hanayome-special/m9134.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/nXwDZKf.png')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">GOTOUBUN NO HANAYOME SPECIAL</div><span class="fbcom-left">6</span><span class="viewed-right">45480 </span><span class="ribbon">02/02</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Masamune-kun no Revenge R -   - " href="./phim/masamune-kun-no-revenge-r/m9075.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx146953-80YtZNkpbhIA.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Masamune-kun no Revenge R</div><span class="fbcom-left">38</span><span class="viewed-right">215520 </span><span class="ribbon">12/12</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Okashi na Tensei - Kiếp chuyển sinh ngọt ngào -  Treat-of-Reincarnation-|-おかしな転生-|-Sweet-Reincarnation - " href="./phim/okashi-na-tensei-kiep-chuyen-sinh-ngot-ngao/m9076.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/dsMILh1.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Okashi na Tensei - Kiếp chuyển sinh ngọt ngào</div><span class="fbcom-left">37</span><span class="viewed-right">242460 </span><span class="ribbon">12/??</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="The Girl Downstairs -  -爱上她的理由-|-Cô-Gái-Tầng-Dưới - " href="./phim/the-girl-downstairs/m9033.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/3ud4miQ.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">The Girl Downstairs</div><span class="fbcom-left">6</span><span class="viewed-right">187845 </span><span class="ribbon">22/??</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Ở Rể -  Ở-Rể - " href="./phim/o-re/m9035.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/GDX3fAP.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Ở Rể</div><span class="fbcom-left">9</span><span class="viewed-right">108450 </span><span class="ribbon">12/12</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Cinderella Girls Gekijou: Extra Stage -  THE-IDOLM@STER-Cinderella-Girls-Theater:-Extra-Stage - " href="./phim/cinderella-girls-gekijou-extra-stage/m7604.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/Sv9QQtd.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Cinderella Girls Gekijou: Extra Stage</div><span class="fbcom-left">0</span><span class="viewed-right">69465 </span><span class="ribbon">48/48</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="The IDOLM@STER Cinderella Girls: U149 -  アイドルマスター-シンデレラガールズ-U149 - " href="./phim/the-idolm-ster-cinderella-girls-u149/m9019.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/Xpn0WXq.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">The IDOLM@STER Cinderella Girls: U149</div><span class="fbcom-left">11</span><span class="viewed-right">94260 </span><span class="ribbon">12/12</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Aru Asa Dummy Head Mic ni Natteita Ore-kun no Jinsei -  My-Life-After-I-Became-a-Dummy-Head-Mic-One-Morning-|-Aru-Asa-Dummy-Head-Mike-ni-Natteita-Ore-kun-no-Jinsei-|-ある朝ダミーヘッドマイクになっていた俺クンの人生 - " href="./phim/aru-asa-dummy-head-mic-ni-natteita-ore-kun-no-jinsei/m8887.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/qaUoLKl.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Aru Asa Dummy Head Mic ni Natteita Ore-kun no Jinsei</div><span class="fbcom-left">7</span><span class="viewed-right">100980 </span><span class="ribbon">12/12</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Cinderella Girls Gekijou -  The-iDOLM@STER-Cinderella-Girls-Gekijou-|-The-Idolmaster-Cinderella-Girls-Gekijou - " href="./phim/cinderella-girls-gekijou/m6188.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/HpaBTyq.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Cinderella Girls Gekijou</div><span class="fbcom-left">28</span><span class="viewed-right">117487 </span><span class="ribbon">13/13</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Eiga Yuru Camp  -  Yuru-Camp-Movie- - " href="./phim/eiga-yuru-camp/m9039.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://m.media-amazon.com/images/M/MV5BMDQ1Y2U0MTktOTBmYS00N2I4LTg1MjktMmMxNTUzOTlhNGNjXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_FMjpg_UX1000_.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Eiga Yuru Camp </div><span class="fbcom-left">10</span><span class="viewed-right">51735 </span><span class="ribbon">Movie</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Cool Doji Danshi -  クールドジ男子-|-Play-It-Cool,-Guys - " href="./phim/cool-doji-danshi/m8842.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/KyHJe5m.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Cool Doji Danshi</div><span class="fbcom-left">7</span><span class="viewed-right">140940 </span><span class="ribbon">24/24</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Kantai Collection  Itsuka Ano Umi de -  Kantai-Collection-1944-|-KanColle:-Itsuka-Ano-Umi-de-|-KanColle:-Someday-in-that-Sea-|-KanColle-2nd-Season-|-Fleet-Girls-Collection-|-艦これ-いつかあの海で - " href="./phim/kantai-collection-itsuka-ano-umi-de/m8899.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/J1DJQlq.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Kantai Collection  Itsuka Ano Umi de</div><span class="fbcom-left">28</span><span class="viewed-right">154200 </span><span class="ribbon">08/08</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Kami-tachi ni Hirowareta Otoko 2nd Season -  The-man-picked-up-by-the-gods-2nd-Season-|-Kamihiro-2nd-Season-|-Kamitachi-ni-Hirowareta-Otoko-2nd-Season-|-神達に拾われた男-|-By-the-Grace-of-the-Gods-Season-2-|-Đặc-Ân-Của-Thần-Phần-2 - " href="./phim/kami-tachi-ni-hirowareta-otoko-2nd-season/m8935.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/JzLbKAQ.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Kami-tachi ni Hirowareta Otoko 2nd Season</div><span class="fbcom-left">39</span><span class="viewed-right">342765 </span><span class="ribbon">12/??</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Ngày Tận Thế Với Chú Chó Shiba Của Tôi -  Sekai-no-Owari-ni-Shiba-Inu-to - " href="./phim/ngay-tan-the-voi-chu-cho-shiba-cua-toi/m8759.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/tZsZNd0.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Ngày Tận Thế Với Chú Chó Shiba Của Tôi</div><span class="fbcom-left">7</span><span class="viewed-right">175125 </span><span class="ribbon">72/??</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Yoru wa Neko to Issho -  Nights-with-a-Cat,-Zutto-Neko-Shoshinsha - " href="./phim/yoru-wa-neko-to-issho/m8705.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/tkEmjVl.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Yoru wa Neko to Issho</div><span class="fbcom-left">7</span><span class="viewed-right">115515 </span><span class="ribbon">30/??</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Gokushufudou -  The-Way-of-the-House-Husband-|-Ông-chồng-Yakuza-nội-trợ - " href="./phim/gokushufudou/m7948.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/RzqXnow.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Gokushufudou</div><span class="fbcom-left">84</span><span class="viewed-right">506490 </span><span class="ribbon">11-15/15</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Mou Ippon! -  もういっぽん！-|-" ippon"-again!="" -="" "="" href="./phim/mou-ippon/m8960.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/rf91FVm.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Mou Ippon!</div><span class="fbcom-left">4</span><span class="viewed-right">43950 </span><span class="ribbon">Trailer</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Karakai Jouzu no Takagi-san Movie -  からかい上手の高木さん-|-Teasing-Master-Takagi-san:-The-Movie - " href="./phim/karakai-jouzu-no-takagi-san-movie/m8922.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/EStGwqk.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Karakai Jouzu no Takagi-san Movie</div><span class="fbcom-left">22</span><span class="viewed-right">93330 </span><span class="ribbon">01/01</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Do It Yourself!! -  Do-It-Yourself!!--どぅー・いっと・ゆあせるふ--|-Do-It-Yourself!! - " href="./phim/do-it-yourself/m8835.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/LkS5aUK.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Do It Yourself!!</div><span class="fbcom-left">9</span><span class="viewed-right">93285 </span><span class="ribbon">09/??</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Chủ Nghĩa Ngoại Hình (Lookism) -  Hoán-Đổi-Diệu-Kỳ-|-Oemo-Jisang-Juui - " href="./phim/chu-nghia-ngoai-hinh-lookism/m8918.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/6Kfeuc1.jpeg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Chủ Nghĩa Ngoại Hình (Lookism)</div><span class="fbcom-left">14</span><span class="viewed-right">117690 </span><span class="ribbon">08/08</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Violet Evergarden: Recollections -  Violet-Evergarden:-Pour-Mémoire-|-ヴァイオレット・エヴァーガーデン特別総集版-|-Violet-Evergarden:-Recollections - " href="./phim/violet-evergarden-recollections/m8917.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/hgvoMDS.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Violet Evergarden: Recollections</div><span class="fbcom-left">8</span><span class="viewed-right">69150 </span><span class="ribbon">01/01</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Mob Psycho 100 III -  Mob-Psycho-100-3rd-Season-|-Mob-Psycho-Hyaku-|-Mob-Psycho-One-Hundred-|-モブサイコ100-III-|-Mob-Psycho-100-III - " href="./phim/mob-psycho-100-iii/m8825.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/ELHkxtW.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Mob Psycho 100 III</div><span class="fbcom-left">69</span><span class="viewed-right">294120 </span><span class="ribbon">12/12</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="4-nin wa Sorezore Uso wo Tsuku -  Four-People-and-Their-Respective-Lies - " href="./phim/4-nin-wa-sorezore-uso-wo-tsuku/m8822.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/5dVjP1u.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">4-nin wa Sorezore Uso wo Tsuku</div><span class="fbcom-left">12</span><span class="viewed-right">127920 </span><span class="ribbon">11/11</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Uzaki-chan wa Asobitai! Double -  Uzaki-chan-wa-Asobitai!-2nd-Season-|-Uzaki-chan-wa-Asobitai!-ω,-Uzaki-chan-Wants-to-Hang-Out!-2nd-Season,-Uzaki-chan-Wants-to-Hang-Out!-ω-|-Uzaki-chan-Muốn-Đi-Chơi!-Mùa-2 - " href="./phim/uzaki-chan-wa-asobitai-double/m8817.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/KcnybIB.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Uzaki-chan wa Asobitai! Double</div><span class="fbcom-left">39</span><span class="viewed-right">388020 </span><span class="ribbon">13/13</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Yama no Susume: Next Summit -  Encouragement-of-Climb:-Next-Summit-|-ヤマノススメ-Next-Summit - " href="./phim/yama-no-susume-next-summit/m8848.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/iTSfow4.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Yama no Susume: Next Summit</div><span class="fbcom-left">7</span><span class="viewed-right">125355 </span><span class="ribbon">12/??</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Shinmai Renkinjutsushi no Tenpo Keiei -  Management-of-Novice-Alchemist--|-Quản-Lý-Cửa-Hàng-Của-Nhà-Giả-Kim-Tân-Binh - " href="./phim/shinmai-renkinjutsushi-no-tenpo-keiei/m8819.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/BeUYpOn.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Shinmai Renkinjutsushi no Tenpo Keiei</div><span class="fbcom-left">35</span><span class="viewed-right">326400 </span><span class="ribbon">12/??</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Hyperdimension Neptunia The Animation - Little Purple Sunshine -   - " href="./phim/hyperdimension-neptunia-the-animation-little-purple-sunshine/m8902.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/ySBuahU.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Hyperdimension Neptunia The Animation - Little Purple Sunshine</div><span class="fbcom-left">8</span><span class="viewed-right">73860 </span><span class="ribbon">01/01</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Saikin Yatotta Maid ga Ayashii -  The-Maid-I-Hired-Recently-Is-Mysterious-|-My-Recently-Hired-Maid-is-Suspicious-|-Cô-Hầu-Gái-Tôi-Mới-Thuê-Gần-Đây-Thật-Đáng-Ngờ - " href="./phim/saikin-yatotta-maid-ga-ayashii/m8683.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/n0DzjOn.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Saikin Yatotta Maid ga Ayashii</div><span class="fbcom-left">39</span><span class="viewed-right">298815 </span><span class="ribbon">11/11</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Soredemo Ayumu wa Yosetekuru -  Dù-Vậy-Thì-Ayumu-Vẫn-Sẽ-Tiếp-Cận-|-Even-so,-Ayumu-draws-closer-to-the-endgame-Even-So-|-Ayumu-Approaches,-Soreayu - " href="./phim/soredemo-ayumu-wa-yosetekuru/m8672.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/j3GTzVl.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Soredemo Ayumu wa Yosetekuru</div><span class="fbcom-left">37</span><span class="viewed-right">312765 </span><span class="ribbon">12/12</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Love Live! Superstar!! 2nd Season -  Love-Live!-Siêu-Sao!!-Mùa-2 - " href="./phim/love-live-superstar-2nd-season/m8688.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/slKZ4P0.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Love Live! Superstar!! 2nd Season</div><span class="fbcom-left">20</span><span class="viewed-right">128490 </span><span class="ribbon">12/12</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Nhật Ký Hán Hoá 3 -  Nhật-Ký-Hán-Hoá-3 - " href="./phim/nhat-ky-han-hoa-3/m8765.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/KiC9yKk.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Nhật Ký Hán Hoá 3</div><span class="fbcom-left">2</span><span class="viewed-right">79500 </span><span class="ribbon">12/12</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Prima Doll -  Prima-Doll - " href="./phim/prima-doll/m8694.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/wPueyE1.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Prima Doll</div><span class="fbcom-left">15</span><span class="viewed-right">149925 </span><span class="ribbon">12/12</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="World Witches Hasshin Shimasu! -  World-Witches-Take-Off! - " href="./phim/world-witches-hasshin-shimasu/m7782.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/2kdPpKi.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">World Witches Hasshin Shimasu!</div><span class="fbcom-left">13</span><span class="viewed-right">402030 </span><span class="ribbon">12/12</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Renmei Kuugun Koukuu Mahou Ongakutai Luminous Witches -  Phi-Đội-Ma-Pháp-Thần-Tượng-Liên-Minh-Không-Quân-Phù-Thủy-Ánh-Dương - " href="./phim/renmei-kuugun-koukuu-mahou-ongakutai-luminous-witches/m8690.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/O3eo0Kh.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Renmei Kuugun Koukuu Mahou Ongakutai Luminous Witches</div><span class="fbcom-left">23</span><span class="viewed-right">206565 </span><span class="ribbon">12/12sp</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Teppen!!!!!!!!!!!!!!! -  Teppen!!!!!!!!!!!!!!!:-Cười-Ra-Nước-Mắt - " href="./phim/teppen/m8699.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/HH77WcW.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Teppen!!!!!!!!!!!!!!!</div><span class="fbcom-left">10</span><span class="viewed-right">118230 </span><span class="ribbon">12/12</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Shadows House 2nd Season -  Shadows-House-2nd-Season - " href="./phim/shadows-house-2nd-season/m8675.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/lKumiaL.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Shadows House 2nd Season</div><span class="fbcom-left">16</span><span class="viewed-right">225810 </span><span class="ribbon">12/12</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Oshiete Hokusai! The Animation -  Teach-Me,-Hokusai! - " href="./phim/oshiete-hokusai-the-animation/m8812.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/Q1ukcnp.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Oshiete Hokusai! The Animation</div><span class="fbcom-left">0</span><span class="viewed-right">17550 </span><span class="ribbon">10/10</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+															
+							<li>
+                                <div class="movie-item m-block"><a title="Housekishou Richard-shi no Nazo Kantei -  The-Case-Files-of-Jeweler-Richard-|--Hồ-sơ-vụ-án-nhà-kim-hoàn-Richard - " href="./phim/housekishou-richard-shi-no-nazo-kantei/m7483.html">
+                                    <div class="block-wrapper">
+                                        <div class="movie-thumbnail ratio-box ratio-3_4">
+                                            <div class="public-film-item-thumb ratio-content" style="background-image:url('https://imgur-com.cdn.ampproject.org/i/imgur.com/V2kVjMI.jpg')"></div>
+                                        </div>
+                                        <div class="movie-meta">
+                                            <div class="movie-title-1">Housekishou Richard-shi no Nazo Kantei</div><span class="fbcom-left">16</span><span class="viewed-right">222630 </span><span class="ribbon">12/12</span>
+											
+										</div>
+											
+                                    </div>
+									
+                                </a>
+								<div class="del-list"></div>
+								</div>
+								
+                            </li>
+								
+					</ul>
+					<div class="clear"></div>
+					<ul class="pagination pagination-lg"><li class="active"><a rel="nofollow">1</a></li>
+						<li><a href="/the-loai/doi-thuong-38/2.html">2</a></li>
+						<li><a href="/the-loai/doi-thuong-38/3.html">3</a></li>
+						<li><a href="/the-loai/doi-thuong-38/4.html">4</a></li>
+						<li><a href="/the-loai/doi-thuong-38/5.html">5</a></li>
+						<li><a href="/the-loai/doi-thuong-38/20.html"><b>»</b></a></li></ul>
+                        <div class="clear"></div>
+
+
+
+
+	
+
+                </div>
+                <div class="clear"></div>
+
+
+
+
+            </div>
+            <!-- Sidebar -->
+            <div class="col-lg-4 sidebar" id="sidebar">
+                <div class="ad-container ad-top-300-250">
+                    <ins id="ccadnet_203_227" style="display: none;">
+						<script>
+							(function(w, d, a) {
+								if (w.ccnads) {
+									return ccnads(a);
+								}
+								if (w.ccnAdsQueue) {
+									return w.ccnAdsQueue.push(a);
+								}
+								w.ccnAdsQueue = [];
+								w.ccnAdsQueue.push(a);
+								var s = d.createElement('script');
+								s.async = true;
+								s.src = 'https://cdn2.cache.vn/banners/sspAnetTest/cc_ssp_new.js';
+								d.head.appendChild(s);
+							})(window, document, {
+								id: 'ccadnet_203_227',
+								fallback: function() {}
+							});
+						</script>
+					</ins>
+
+<div class="ad_location" id="ads_location"></div>
+                </div>
+                <div class="right-box top-film">
+
+                    
+                    <h2 class="right-box-header star-icon"><span>Xem Nhiều Nhất</span></h2>
+                    <span class="tabs"><div class="tab active" data-name="day" data-target=".right-box.top-film .content"><div class="name"><a title="Day" href="DAY">Ngày</a></div></div>
+								<div class="tab" data-name="week" data-target=".right-box.top-film .content"><div class="name"><a title="DAY" rel="nofollow" href="DAY">Tuần</a></div></div>
+								<div class="tab" data-name="month" data-target=".right-box.top-film .content"><div class="name"><a title="MONTH" rel="nofollow" href="MONTH">Tháng</a></div></div>
+								<div class="tab" data-name="mua" data-target=".right-box.top-film .content"><div class="name"><a title="MUA" rel="nofollow" href="YEAR">Mùa</a></div></div>
+								<div class="tab" data-name="year" data-target=".right-box.top-film .content"><div class="name"><a title="YEAR" rel="nofollow" href="ALL">Năm</a></div></div>
+								
+								
+								 </span>
+                    <div class="right-box-content">
+
+
+                        <div class="content" data-name="day">
+<ul class="list-top-movie">
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Goblin Slayer 2nd Season | ゴブリンスレイヤーⅡ - Goblin Slayer II" href="/phim/goblin-slayer-ii/m9141.html">
+			<span class="status">04/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/WyD8zAy.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Goblin Slayer II</span><span class="list-top-movie-item-en"> Goblin Slayer ...</span><span class="list-top-movie-item-view">1200 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Shadow Garden 2nd Season | 陰の実力者になりたくて！ 2nd Season | The Eminence in Shadow Season 2 - Kage no Jitsuryokusha ni Naritakute! 2nd Season" href="/phim/kage-no-jitsuryokusha-ni-naritakute-2nd-season/m9142.html">
+			<span class="status">04/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/nZu9ClH.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Kage no Jitsuryokusha ni Naritakute! 2nd Season</span><span class="list-top-movie-item-en"> Shadow Garden ...</span><span class="list-top-movie-item-view">1110 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Our Dating Story: The Experienced You and The Inexperienced Me | Kimizero | 経験済みなキミと、 経験ゼロなオレが、 お付き合いする話。 - Keikenzumi na Kimi to, Keiken Zero na Ore ga, Otsukiai suru Hanashi." href="/phim/keikenzumi-na-kimi-to-keiken-zero-na-ore-ga-otsukiai-suru-hanashi/m9146.html">
+			<span class="status">04/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/IBeCdJx.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Keikenzumi na Kimi to, Keiken Zero na Ore ga, Otsukiai suru Hanashi.</span><span class="list-top-movie-item-en"> Our Dating ...</span><span class="list-top-movie-item-view">900 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Sorcery Fight | JJK | 呪術廻戦 | Chú Thuật Hồi Chiến 2 - Jujutsu Kaisen 2nd Season" href="/phim/jujutsu-kaisen-2nd-season/m9055.html">
+			<span class="status">14/23</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/UM3Ql57.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Jujutsu Kaisen 2nd Season</span><span class="list-top-movie-item-en"> Sorcery Fight ...</span><span class="list-top-movie-item-view">885 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Kanokano | カノジョも彼女 Season 2 | Girlfriend, Girlfriend Season 2 - Kanojo mo Kanojo Season 2" href="/phim/kanojo-mo-kanojo-season-2/m9152.html">
+			<span class="status">04/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/RDeXgyn.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Kanojo mo Kanojo Season 2</span><span class="list-top-movie-item-en"> Kanokano | ...</span><span class="list-top-movie-item-view">855 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Frieren at the Funeral | 葬送のフリーレン | Frieren: Beyond Journey\'s End - Sousou no Frieren" href="/phim/sousou-no-frieren/m9143.html">
+			<span class="status">07/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/8heEaC5.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Sousou no Frieren</span><span class="list-top-movie-item-en"> Frieren at ...</span><span class="list-top-movie-item-view">705 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="One Piece | Đảo Hải Tặc - Vua Hải Tặc" href="/phim/vua-hai-tac/m7667.html">
+			<span class="status">1080/???</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/upKkQl6.png')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Vua Hải Tặc</span><span class="list-top-movie-item-en"> One Piece ...</span><span class="list-top-movie-item-view">690 Lượt xem</span></div>
+		</a>
+	</li>
+		
+</ul>
+</div>
+                        <div class="content hidden" data-name="week">
+<ul class="list-top-movie">
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Shadow Garden 2nd Season | 陰の実力者になりたくて！ 2nd Season | The Eminence in Shadow Season 2 - Kage no Jitsuryokusha ni Naritakute! 2nd Season" href="/phim/kage-no-jitsuryokusha-ni-naritakute-2nd-season/m9142.html">
+			<span class="status">04/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/nZu9ClH.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Kage no Jitsuryokusha ni Naritakute! 2nd Season</span><span class="list-top-movie-item-en"> Shadow Garden ...</span><span class="list-top-movie-item-view">24375 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Magic Sword Master of Holy Sword School | 聖剣学院の魔剣使い | The Demon Sword Master of Excalibur Academy - Seiken Gakuin no Makentsukai" href="/phim/seiken-gakuin-no-makentsukai/m9153.html">
+			<span class="status">04/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/bha8E0f.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Seiken Gakuin no Makentsukai</span><span class="list-top-movie-item-en"> Magic Sword ...</span><span class="list-top-movie-item-view">20160 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="暴食のベルセルク | Berserk of Gluttony - Boushoku no Berserk" href="/phim/boushoku-no-berserk/m9162.html">
+			<span class="status">04/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/7sNW8kH.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Boushoku no Berserk</span><span class="list-top-movie-item-en"> 暴食のベルセルク | ...</span><span class="list-top-movie-item-view">18990 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="One Piece | Đảo Hải Tặc - Vua Hải Tặc" href="/phim/vua-hai-tac/m7667.html">
+			<span class="status">1080/???</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/upKkQl6.png')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Vua Hải Tặc</span><span class="list-top-movie-item-en"> One Piece ...</span><span class="list-top-movie-item-view">16995 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Shangri-La Frontier: Crappy Game Hunter Challenges God-Tier Game | シャングリラ・フロンティア～クソゲーハンター、神ゲーに挑まんとす～ | Shangri-La Frontier - Shangri-La Frontier: Kusoge Hunter, Kamige ni Idoman to su" href="/phim/shangri-la-frontier-kusoge-hunter-kamige-ni-idoman-to-su/m9159.html">
+			<span class="status">04/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/BnLuiqW.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Shangri-La Frontier: Kusoge Hunter, Kamige ni Idoman to su</span><span class="list-top-movie-item-en"> Shangri-La Frontier: ...</span><span class="list-top-movie-item-view">15570 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Sorcery Fight | JJK | 呪術廻戦 | Chú Thuật Hồi Chiến 2 - Jujutsu Kaisen 2nd Season" href="/phim/jujutsu-kaisen-2nd-season/m9055.html">
+			<span class="status">14/23</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/UM3Ql57.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Jujutsu Kaisen 2nd Season</span><span class="list-top-movie-item-en"> Sorcery Fight ...</span><span class="list-top-movie-item-view">15270 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="A Certain Middle-Aged Man\'s VRMMO Activity Log | とあるおっさんのVRMMO活動記 | A Playthrough of a Certain Dude\'s VRMMO Life - Toaru Ossan no VRMMO Katsudouki" href="/phim/toaru-ossan-no-vrmmo-katsudouki/m9180.html">
+			<span class="status">04/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/Ii4rJmg.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Toaru Ossan no VRMMO Katsudouki</span><span class="list-top-movie-item-en"> A Certain ...</span><span class="list-top-movie-item-view">13500 Lượt xem</span></div>
+		</a>
+	</li>
+		
+</ul>
+</div>
+
+                        <div class="content hidden" data-name="month">
+<ul class="list-top-movie">
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Shadow Garden 2nd Season | 陰の実力者になりたくて！ 2nd Season | The Eminence in Shadow Season 2 - Kage no Jitsuryokusha ni Naritakute! 2nd Season" href="/phim/kage-no-jitsuryokusha-ni-naritakute-2nd-season/m9142.html">
+			<span class="status">04/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/nZu9ClH.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Kage no Jitsuryokusha ni Naritakute! 2nd Season</span><span class="list-top-movie-item-en"> Shadow Garden ...</span><span class="list-top-movie-item-view">114525 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="暴食のベルセルク | Berserk of Gluttony - Boushoku no Berserk" href="/phim/boushoku-no-berserk/m9162.html">
+			<span class="status">04/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/7sNW8kH.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Boushoku no Berserk</span><span class="list-top-movie-item-en"> 暴食のベルセルク | ...</span><span class="list-top-movie-item-view">98280 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Magic Sword Master of Holy Sword School | 聖剣学院の魔剣使い | The Demon Sword Master of Excalibur Academy - Seiken Gakuin no Makentsukai" href="/phim/seiken-gakuin-no-makentsukai/m9153.html">
+			<span class="status">04/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/bha8E0f.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Seiken Gakuin no Makentsukai</span><span class="list-top-movie-item-en"> Magic Sword ...</span><span class="list-top-movie-item-view">96000 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Sorcery Fight | JJK | 呪術廻戦 | Chú Thuật Hồi Chiến 2 - Jujutsu Kaisen 2nd Season" href="/phim/jujutsu-kaisen-2nd-season/m9055.html">
+			<span class="status">14/23</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/UM3Ql57.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Jujutsu Kaisen 2nd Season</span><span class="list-top-movie-item-en"> Sorcery Fight ...</span><span class="list-top-movie-item-view">405480 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="One Piece | Đảo Hải Tặc - Vua Hải Tặc" href="/phim/vua-hai-tac/m7667.html">
+			<span class="status">1080/???</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/upKkQl6.png')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Vua Hải Tặc</span><span class="list-top-movie-item-en"> One Piece ...</span><span class="list-top-movie-item-view">7307531 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Shangri-La Frontier: Crappy Game Hunter Challenges God-Tier Game | シャングリラ・フロンティア～クソゲーハンター、神ゲーに挑まんとす～ | Shangri-La Frontier - Shangri-La Frontier: Kusoge Hunter, Kamige ni Idoman to su" href="/phim/shangri-la-frontier-kusoge-hunter-kamige-ni-idoman-to-su/m9159.html">
+			<span class="status">04/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/BnLuiqW.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Shangri-La Frontier: Kusoge Hunter, Kamige ni Idoman to su</span><span class="list-top-movie-item-en"> Shangri-La Frontier: ...</span><span class="list-top-movie-item-view">82590 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="ラグナクリムゾン - Ragna Crimson" href="/phim/ragna-crimson/m9151.html">
+			<span class="status">04/24</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/aydLeUv.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Ragna Crimson</span><span class="list-top-movie-item-en">ラグナクリムゾン</span><span class="list-top-movie-item-view">77115 Lượt xem</span></div>
+		</a>
+	</li>
+		
+</ul>
+</div>
+                        <div class="content hidden" data-name="mua">
+<ul class="list-top-movie">
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Shadow Garden 2nd Season | 陰の実力者になりたくて！ 2nd Season | The Eminence in Shadow Season 2 - Kage no Jitsuryokusha ni Naritakute! 2nd Season" href="/phim/kage-no-jitsuryokusha-ni-naritakute-2nd-season/m9142.html">
+			<span class="status">04/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/nZu9ClH.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Kage no Jitsuryokusha ni Naritakute! 2nd Season</span><span class="list-top-movie-item-en"> Shadow Garden ...</span><span class="list-top-movie-item-view">114525 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="暴食のベルセルク | Berserk of Gluttony - Boushoku no Berserk" href="/phim/boushoku-no-berserk/m9162.html">
+			<span class="status">04/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/7sNW8kH.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Boushoku no Berserk</span><span class="list-top-movie-item-en"> 暴食のベルセルク | ...</span><span class="list-top-movie-item-view">98280 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Magic Sword Master of Holy Sword School | 聖剣学院の魔剣使い | The Demon Sword Master of Excalibur Academy - Seiken Gakuin no Makentsukai" href="/phim/seiken-gakuin-no-makentsukai/m9153.html">
+			<span class="status">04/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/bha8E0f.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Seiken Gakuin no Makentsukai</span><span class="list-top-movie-item-en"> Magic Sword ...</span><span class="list-top-movie-item-view">96000 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Shangri-La Frontier: Crappy Game Hunter Challenges God-Tier Game | シャングリラ・フロンティア～クソゲーハンター、神ゲーに挑まんとす～ | Shangri-La Frontier - Shangri-La Frontier: Kusoge Hunter, Kamige ni Idoman to su" href="/phim/shangri-la-frontier-kusoge-hunter-kamige-ni-idoman-to-su/m9159.html">
+			<span class="status">04/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/BnLuiqW.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Shangri-La Frontier: Kusoge Hunter, Kamige ni Idoman to su</span><span class="list-top-movie-item-en"> Shangri-La Frontier: ...</span><span class="list-top-movie-item-view">82590 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="ラグナクリムゾン - Ragna Crimson" href="/phim/ragna-crimson/m9151.html">
+			<span class="status">04/24</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/aydLeUv.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Ragna Crimson</span><span class="list-top-movie-item-en">ラグナクリムゾン</span><span class="list-top-movie-item-view">77115 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="はめつのおうこく | The Kingdoms of Ruin - Hametsu no Oukoku" href="/phim/hametsu-no-oukoku/m9157.html">
+			<span class="status">03/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/fXrJe46.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Hametsu no Oukoku</span><span class="list-top-movie-item-en"> はめつのおうこく | ...</span><span class="list-top-movie-item-view">75510 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="A Certain Middle-Aged Man\'s VRMMO Activity Log | とあるおっさんのVRMMO活動記 | A Playthrough of a Certain Dude\'s VRMMO Life - Toaru Ossan no VRMMO Katsudouki" href="/phim/toaru-ossan-no-vrmmo-katsudouki/m9180.html">
+			<span class="status">04/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/Ii4rJmg.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Toaru Ossan no VRMMO Katsudouki</span><span class="list-top-movie-item-en"> A Certain ...</span><span class="list-top-movie-item-view">66555 Lượt xem</span></div>
+		</a>
+	</li>
+		
+</ul>
+</div>
+
+                        <div class="content hidden" data-name="year">
+<ul class="list-top-movie">
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Vì Mình Chẳng Muốn Bị Đau Nên Mình Sẽ Nâng Tối Đa Lực Phòng Ngự Phần 2 - Itai no wa Iya nano de Bougyoryoku ni Kyokufuri Shitai to Omoimasu II" href="/phim/itai-no-wa-iya-nano-de-bougyoryoku-ni-kyokufuri-shitai-to-omoimasu-ii/m7545.html">
+			<span class="status">12/12</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/4IgkxM2.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Itai no wa Iya nano de Bougyoryoku ni Kyokufuri Shitai to Omoimasu II</span><span class="list-top-movie-item-en"> Vì Mình ...</span><span class="list-top-movie-item-view">1242915 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="異世界のんびり農家 | Farming Life in Another World | Cuộc sống nông dân ở thế giới khác - Isekai Nonbiri Nouka" href="/phim/isekai-nonbiri-nouka/m8909.html">
+			<span class="status">12/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/GIlCBnk.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Isekai Nonbiri Nouka</span><span class="list-top-movie-item-en"> 異世界のんびり農家 | ...</span><span class="list-top-movie-item-view">688980 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="The Reincarnation of the Strongest Onmyouji in Another World | 最強陰陽師の異世界転生記 | The Reincarnation of the Strongest Exorcist in Another World | Âm dương sư mạnh nhất chuyển sinh - Saikyou Onmyouji no Isekai Tenseiki" href="/phim/saikyou-onmyouji-no-isekai-tenseiki/m8913.html">
+			<span class="status">13/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/WpQSoqz.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Saikyou Onmyouji no Isekai Tenseiki</span><span class="list-top-movie-item-en"> The Reincarnation ...</span><span class="list-top-movie-item-view">660930 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Iseleve | 異世界でチート能力を手にした俺は、現実世界をも無双する ～レベルアップは人生を変えた～ | I Got a Cheat Skill in Another World and Became Unrivaled in The Real World, Too | Sau khi có được năng lực bá đạo ở dị giới, tôi cũng vô đối ở thế giới thực ~Thăng cấp xong thì cuộc đời cũng thay đổi~ - Isekai de Cheat Skill wo Te ni Shita Ore wa, Genjitsu Sekai wo mo Musou Suru: Level Up wa Jinsei wo Kaeta" href="/phim/isekai-de-cheat-skill-wo-te-ni-shita-ore-wa-genjitsu-sekai-wo-mo-musou-suru-level-up-wa-jinsei-wo-kaeta/m8988.html">
+			<span class="status">13/13</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/K97Oulx.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Isekai de Cheat Skill wo Te ni Shita Ore wa, Genjitsu Sekai wo mo Musou Suru: Level Up wa Jinsei wo Kaeta</span><span class="list-top-movie-item-en"> Iseleve | ...</span><span class="list-top-movie-item-view">619965 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Học Viện Ma Vương Phần 2 - Maou Gakuin no Futekigousha: Shijou Saikyou no Maou no Shiso, Tensei shite Shison-tachi no Gakkou e Kayou II" href="/phim/maou-gakuin-no-futekigousha-shijou-saikyou-no-maou-no-shiso-tensei-shite-shison-tachi-no-gakkou-e-kayou-ii/m8924.html">
+			<span class="status">12/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/35B6LzD.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Maou Gakuin no Futekigousha: Shijou Saikyou no Maou no Shiso, Tensei shite Shison-tachi no Gakkou e Kayou II</span><span class="list-top-movie-item-en"> Học Viện ...</span><span class="list-top-movie-item-view">553920 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="お隣の天使様にいつの間にか駄目人間にされていた件 | The Angel Next Door Spoils Me Rotten - Otonari no Tenshi-sama ni Itsunomanika Dame Ningen ni Sareteita Ken" href="/phim/otonari-no-tenshi-sama-ni-itsunomanika-dame-ningen-ni-sareteita-ken/m8931.html">
+			<span class="status">12/12</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/K6o8TEC.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Otonari no Tenshi-sama ni Itsunomanika Dame Ningen ni Sareteita Ken</span><span class="list-top-movie-item-en"> お隣の天使様にいつの間にか駄目人間にされていた件 | ...</span><span class="list-top-movie-item-view">483180 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="鬼滅の刃 刀鍛冶の里編 | Demon Slayer: Kimetsu no Yaiba Swordsmith Village Arc - Kimetsu no Yaiba: Katanakaji no Sato-hen" href="/phim/kimetsu-no-yaiba-katanakaji-no-sato-hen/m8978.html">
+			<span class="status">11/11</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/thhvV86.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Kimetsu no Yaiba: Katanakaji no Sato-hen</span><span class="list-top-movie-item-en"> 鬼滅の刃 刀鍛冶の里編 ...</span><span class="list-top-movie-item-view">475920 Lượt xem</span></div>
+		</a>
+	</li>
+		
+</ul>
+</div>
+
+
+
+                    </div>
+
+                </div>
+                <div class="clear"></div>
+                <div class="ad-container ad-top-300-250"><ins id="ccadnet_203_227" style="display: none;">
+    <script>
+        (function(w, d, a) {
+            if (w.ccnads) {
+                return ccnads(a);
+            }
+            if (w.ccnAdsQueue) {
+                return w.ccnAdsQueue.push(a);
+            }
+            w.ccnAdsQueue = [];
+            w.ccnAdsQueue.push(a);
+            var s = d.createElement('script');
+            s.async = true;
+            s.src = 'https://cdn2.cache.vn/banners/sspAnetTest/cc_ssp_new.js';
+            d.head.appendChild(s);
+        })(window, document, {
+            id: 'ccadnet_203_227',
+            fallback: function() {}
+        });
+    </script>
+</ins>
+
+<div class="ad_location" id="ads_location"></div> </div>
+                <div class="right-box bl-film">
+                    <h2 class="right-box-header star-icon"><span>Bình luận nhiều</span></h2>
+
+                    <span class="tabs">
+						 <div class="tab active" data-name="blmn" data-target=".bl-film .content"><div class="name"><a title="comment" href="MN">Mùa Này</a></div></div>
+								<div class="tab" data-name="blmt" data-target=".bl-film .content"><div class="name"><a title="comment" rel="nofollow" href="MT">Mùa Trước</a></div></div>
+								<div class="tab" data-name="blnam" data-target=".bl-film .content"><div class="name"><a title="comment" rel="nofollow" href="Nam">Năm</a></div></div>
+								<div class="tab" data-name="blall" data-target=".bl-film .content"><div class="name"><a title="comment" rel="nofollow" href="blALL">ALL</a></div></div>
+								
+								
+				 </span>
+                    <div class="right-box-content">
+
+
+                        <div class="content" data-name="blmn">
+<ul class="list-top-movie">
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Shadow Garden 2nd Season | 陰の実力者になりたくて！ 2nd Season | The Eminence in Shadow Season 2 - Kage no Jitsuryokusha ni Naritakute! 2nd Season" href="/phim/kage-no-jitsuryokusha-ni-naritakute-2nd-season/m9142.html">
+			<span class="status">04/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/nZu9ClH.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Kage no Jitsuryokusha ni Naritakute! 2nd Season</span><span class="list-top-movie-item-en"> Shadow Garden ...</span><span class="list-top-movie-item-view">114525 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="暴食のベルセルク | Berserk of Gluttony - Boushoku no Berserk" href="/phim/boushoku-no-berserk/m9162.html">
+			<span class="status">04/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/7sNW8kH.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Boushoku no Berserk</span><span class="list-top-movie-item-en"> 暴食のベルセルク | ...</span><span class="list-top-movie-item-view">98280 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="ラグナクリムゾン - Ragna Crimson" href="/phim/ragna-crimson/m9151.html">
+			<span class="status">04/24</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/aydLeUv.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Ragna Crimson</span><span class="list-top-movie-item-en">ラグナクリムゾン</span><span class="list-top-movie-item-view">77115 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="はめつのおうこく | The Kingdoms of Ruin - Hametsu no Oukoku" href="/phim/hametsu-no-oukoku/m9157.html">
+			<span class="status">03/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/fXrJe46.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Hametsu no Oukoku</span><span class="list-top-movie-item-en"> はめつのおうこく | ...</span><span class="list-top-movie-item-view">75510 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Shangri-La Frontier: Crappy Game Hunter Challenges God-Tier Game | シャングリラ・フロンティア～クソゲーハンター、神ゲーに挑まんとす～ | Shangri-La Frontier - Shangri-La Frontier: Kusoge Hunter, Kamige ni Idoman to su" href="/phim/shangri-la-frontier-kusoge-hunter-kamige-ni-idoman-to-su/m9159.html">
+			<span class="status">04/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/BnLuiqW.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Shangri-La Frontier: Kusoge Hunter, Kamige ni Idoman to su</span><span class="list-top-movie-item-en"> Shangri-La Frontier: ...</span><span class="list-top-movie-item-view">82590 Lượt xem</span></div>
+		</a>
+	</li>
+		
+</ul>
+</div>
+                        <div class="content hidden" data-name="blmt">
+<ul class="list-top-movie">
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Jobless Reincarnation: I Will Seriously Try If I Go To Another World | Mushoku Tensei: Isekai Ittara Honki Dasu 2nd Season | 無職転生 II ～異世界行ったら本気だす～ | Mushoku Tensei: Jobless Reincarnation Season 2 | Thất nghiệp chuyển sinh: Sang thế giới khác tôi sẽ nghiêm túc - mùa 2 - Mushoku Tensei II: Isekai Ittara Honki Dasu" href="/phim/mushoku-tensei-ii-isekai-ittara-honki-dasu/m9079.html">
+			<span class="status">12/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/hxKHn5Z.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Mushoku Tensei II: Isekai Ittara Honki Dasu</span><span class="list-top-movie-item-en"> Jobless Reincarnation: ...</span><span class="list-top-movie-item-view">355500 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Sorcery Fight | JJK | 呪術廻戦 | Chú Thuật Hồi Chiến 2 - Jujutsu Kaisen 2nd Season" href="/phim/jujutsu-kaisen-2nd-season/m9055.html">
+			<span class="status">14/23</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/UM3Ql57.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Jujutsu Kaisen 2nd Season</span><span class="list-top-movie-item-en"> Sorcery Fight ...</span><span class="list-top-movie-item-view">405480 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Bucket List of The Dead | Zombie 100: 100 Things I Want to do Before I Become a Zombie | ゾン100～ゾンビになるまでにしたい100のこと～ | Zom 100: Bucket List of the Dead - Zom 100: Zombie ni Naru made ni Shitai 100 no Koto" href="/phim/zom-100-zombie-ni-naru-made-ni-shitai-100-no-koto/m9109.html">
+			<span class="status">09/13</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/TJifsQl.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Zom 100: Zombie ni Naru made ni Shitai 100 no Koto</span><span class="list-top-movie-item-en"> Bucket List ...</span><span class="list-top-movie-item-view">248790 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="夢見る男子は現実主義者 | The Dreaming Boy is a Realist - Yumemiru Danshi wa Genjitsushugisha" href="/phim/yumemiru-danshi-wa-genjitsushugisha/m9087.html">
+			<span class="status">12/12</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/fZURdr8.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Yumemiru Danshi wa Genjitsushugisha</span><span class="list-top-movie-item-en"> 夢見る男子は現実主義者 | ...</span><span class="list-top-movie-item-view">272820 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Nanatsuma | 七つの魔剣が支配する | Reign of the Seven Spellblades | Thất Kiếm Ma Thuật Thống Trị Thế Giới - Nanatsu no Maken ga Shihai suru" href="/phim/nanatsu-no-maken-ga-shihai-suru/m9099.html">
+			<span class="status">15/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/gAb3fB1.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Nanatsu no Maken ga Shihai suru</span><span class="list-top-movie-item-en"> Nanatsuma | ...</span><span class="list-top-movie-item-view">264765 Lượt xem</span></div>
+		</a>
+	</li>
+		
+</ul>
+</div>
+                        <div class="content hidden" data-name="blnam">
+<ul class="list-top-movie">
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Vì Mình Chẳng Muốn Bị Đau Nên Mình Sẽ Nâng Tối Đa Lực Phòng Ngự Phần 2 - Itai no wa Iya nano de Bougyoryoku ni Kyokufuri Shitai to Omoimasu II" href="/phim/itai-no-wa-iya-nano-de-bougyoryoku-ni-kyokufuri-shitai-to-omoimasu-ii/m7545.html">
+			<span class="status">12/12</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/4IgkxM2.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Itai no wa Iya nano de Bougyoryoku ni Kyokufuri Shitai to Omoimasu II</span><span class="list-top-movie-item-en"> Vì Mình ...</span><span class="list-top-movie-item-view">1242915 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Iseleve | 異世界でチート能力を手にした俺は、現実世界をも無双する ～レベルアップは人生を変えた～ | I Got a Cheat Skill in Another World and Became Unrivaled in The Real World, Too | Sau khi có được năng lực bá đạo ở dị giới, tôi cũng vô đối ở thế giới thực ~Thăng cấp xong thì cuộc đời cũng thay đổi~ - Isekai de Cheat Skill wo Te ni Shita Ore wa, Genjitsu Sekai wo mo Musou Suru: Level Up wa Jinsei wo Kaeta" href="/phim/isekai-de-cheat-skill-wo-te-ni-shita-ore-wa-genjitsu-sekai-wo-mo-musou-suru-level-up-wa-jinsei-wo-kaeta/m8988.html">
+			<span class="status">13/13</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/K97Oulx.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Isekai de Cheat Skill wo Te ni Shita Ore wa, Genjitsu Sekai wo mo Musou Suru: Level Up wa Jinsei wo Kaeta</span><span class="list-top-movie-item-en"> Iseleve | ...</span><span class="list-top-movie-item-view">619965 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="便利屋斎藤さん、異世界に行く | Anh Thợ Saitou Đa Năng Ở Dị Giới - Benriya Saitou-san, Isekai ni Iku" href="/phim/benriya-saitou-san-isekai-ni-iku/m8945.html">
+			<span class="status">12/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/ovrJpCm.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Benriya Saitou-san, Isekai ni Iku</span><span class="list-top-movie-item-en"> 便利屋斎藤さん、異世界に行く | ...</span><span class="list-top-movie-item-view">450420 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="My Star | 【Oshi no Ko】 | 【推しの子】 | [Đứa Con Của Thần Tượng] - Oshi no Ko" href="/phim/oshi-no-ko/m8983.html">
+			<span class="status">11/??</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/rTyC5Xa.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Oshi no Ko</span><span class="list-top-movie-item-en"> My Star ...</span><span class="list-top-movie-item-view">371760 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="NieR: Automata - NieR:Automata Ver1.1a" href="/phim/nier-automata-ver1-1a/m8928.html">
+			<span class="status">12/12</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/e93Ao57.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">NieR:Automata Ver1.1a</span><span class="list-top-movie-item-en">NieR: Automata</span><span class="list-top-movie-item-view">302085 Lượt xem</span></div>
+		</a>
+	</li>
+		
+</ul>
+</div>
+                        <div class="content hidden" data-name="blall">
+<ul class="list-top-movie">
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="One Piece | Đảo Hải Tặc - Vua Hải Tặc" href="/phim/vua-hai-tac/m7667.html">
+			<span class="status">1080/???</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/upKkQl6.png')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Vua Hải Tặc</span><span class="list-top-movie-item-en"> One Piece ...</span><span class="list-top-movie-item-view">7307531 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Re: Life in a different world from zero - Re:Zero kara Hajimeru Isekai Seikatsu" href="/phim/re-zero-kara-hajimeru-isekai-seikatsu/m5527.html">
+			<span class="status">25/25[BD]</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/sYlvVJK.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Re:Zero kara Hajimeru Isekai Seikatsu</span><span class="list-top-movie-item-en"> Re: Life ...</span><span class="list-top-movie-item-view">2818009 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Naruto Shippuuden - Naruto Shippuuden" href="/phim/naruto-shippuuden/m4742.html">
+			<span class="status">500/500[HD]</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/Ltp8pyO.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Naruto Shippuuden</span><span class="list-top-movie-item-en">Naruto Shippuuden</span><span class="list-top-movie-item-view">13781190 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Dragon Ball Chou - Dragon Ball Super" href="/phim/dragon-ball-super/m5098.html">
+			<span class="status">131/131</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/SGpv1JA.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Dragon Ball Super</span><span class="list-top-movie-item-en"> Dragon Ball ...</span><span class="list-top-movie-item-view">4017139 Lượt xem</span></div>
+		</a>
+	</li>
+		<li class="list-top-movie-item" id="list-top-movie-item">
+		<a class="list-top-movie-link" title="Over Lord - Overlord" href="/phim/overlord/m5108.html">
+			<span class="status">13/13</span>
+			<div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/QuaFt09.jpg')"></div>
+			<div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Overlord</span><span class="list-top-movie-item-en">Over Lord</span><span class="list-top-movie-item-view">5167317 Lượt xem</span></div>
+		</a>
+	</li>
+		
+</ul>
+</div>
+
+
+
+                    </div>
+                </div>
+
+
+                <div class="ad-container right-box ad-300">
+                </div>
+                <div class="clear"></div>
+                <!-- /Ad: Sidebanner -->
+            </div>
+
+
+
+
+
+
+            <div class="clear"></div>
+            <!-- /Sidebar -->
+            <!-- Footer banner -->
+            <div class="container ad-container banner-footer" id="footer-banner">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- ad center 2-->
+                        <div class="ad-center-980"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Footer banner -->
+        </div>
+        <!-- /Main content -->
+    </div>
+</body>
+</html>

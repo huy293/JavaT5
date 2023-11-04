@@ -43,93 +43,50 @@
         </div>
     </header>
     <div id="home" class="container">
-        <div class="search">
-            <form id="form-filter" class="form-inline" method="GET" action="">
-                
-                <div class="list-search">
-                    <label for="filter-eptype">Tiến độ</label>
-                    <select class="form-control" id="filter-eptype" name="status">
-                                <option value="">Tất cả</option>
-                                <option value="complete">Hoàn thành</option>
-                                <option value="ongoing">Chưa xong</option>
-                    </select>
-                </div>
-                
-                <div class="list-search">
-                    <label for="filter-category">Thể loại</label>
-                        
-                    <span class="">
-                        <!--<select style="margin-top: 5px;" class="" id="filter-category" name="genres" multiple="multiple">
-                            <option value="38">Đời Thường</option>														     
-                        </select>-->
-                        <div class="btn-group">
-                            <button type="button" class="multiselect dropdown-toggle form-control selectpicker" data-toggle="dropdown" title="Genres">
-                                <span class="multiselect-selected-text">Genres</span>
-                                <b class="caret"></b>
-                            </button>
-                            <ul class="multiselect-container dropdown-menu">
-                                <li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="38"> Đời Thường</label></a></li>
-                            </ul>
-                        </div>
-                    </span>
-                        
-                </div>
-                <div class="list-search">
-                    <label for="filter-year">Năm phát hành</label>
-                    <select id="filter-year" name="year" class="form-control">
-                        <option value="">Tất cả</option>
-                        <option value="2023">2023</option>
-                        <option value="2022">2022</option>
-                        <option value="2021">2021</option>
-                        <option value="2020">2020</option>
-                        <option value="2019">2019</option>
-                        <option value="2018">2018</option>
-                        <option value="2017">2017</option>
-                        <option value="2016">2016</option>
-                        <option value="2015">2015</option>
-                        <option value="2014">2014</option>
-                        <option value="2013">2013</option>
-                        <option value="2012">2012</option>
-                        <option value="2011">2011</option>
-                        <option value="2010">2010</option>
-                    </select>
-                </div>
-                <div class="list-search">
-                    <label for="filter-sort">Sắp xếp</label>
-                    <select class="form-control" id="filter-sort" name="sort">
-                    <option value="popular">Lượt xem</option>
-                    <option value="comment">Bình luận</option>
-                    <option value="year">Năm</option>
-                </select>
-                </div>
-                <button type="submit" id="btn-movie-filter" class="btn btn-blue btn-filter-movie"><span>Áp dụng</span></button>
-            </form>
-        </div>
         <div class="row">
             <div class="col-lg-8">
-                <div class="list-all-film">
-                    <h3 class=""><span>Mới nhất</span></h3>
-                    <div class="row">
-                        <div class ="movie col-lg-3 col-md-6">
-                            <a href="Inf.html">
-                            <div class="movie-item text-center">
-                                <img class="imgh" src="https://imgur-com.cdn.ampproject.org/i/imgur.com/RDeXgyn.jpg" alt="">
-                                <div class="movie-meta">
-                                    <div class="movie-name">Tên anime</div>
-                                    <p class="p1">Số cmt</i></p>
-                                    <p class="p2">Số view</i></p>
-                                </div>
-                            </div>
-                            </a>
+                <div class="dd"><a href="">Đường dẫn phim</a></div>
+                <div class="inf-all">
+                    <div class="inf-avt-link">
+                        <div class="inf-avt-link-item-img">
+                          <a href="#"><img class="imgh" src="https://imgur-com.cdn.ampproject.org/i/imgur.com/RDeXgyn.jpg" alt=""></a>
+                          <div class="inf-btn">
+                            <button class="btn btn-success btnpd">Lưu Lại</button>
+                            <button class="btn btn-primary btnpd">Tải phim</button>
+                            <button class="btn btn-danger btnpd">Xem phim</button>
+                          </div>
                         </div>
-                    </div>
+                        <div class="inf-avt-link-item">
+                          <div class="inf-avt-link-item-name">
+                            <h3>Tên phim</h3>
+                            <span class="nho">Tên phim</span>
+                          </div>
+                          <div class="inf-avt-link-item-status">
+                            <p>Trạng thái</p>
+                            <p>Thể loại</p>
+                            <p>Type</p>
+                            <p>Thời lượng</p>
+                            <p>Năm sản xuất</p>
+                            <p>Lượt xem</p>
+                          </div>
+                          <div class="inf-avt-link-item-tap">
+                            <p>Tập phim:</p>
+                            <div class="inf-avt-link-item-tap-list">
+                              <a href="#">1</a>
+                              <a href="#">2</a>
+                              <a href="#">3</a>
+                              <a href="#">4</a>
+                              <a href="#">5</a>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="inf-film">
+                    <hr>
+                    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                    <iframe width="100%" height="400" src="https://poe.com/chat/2oqsmch0o7licjipu5b"></iframe>
+                  </div>
                 </div>
-                <ul class="pagination pagination-lg count-page"><li class="active"><a>1</a></li>
-                    <li><a href="">2</a></li>
-                    <li><a href="">3</a></li>
-                    <li><a href="">4</a></li>
-                    <li><a href="">5</a></li>
-                    <li><a href=""><b>»</b></a></li></ul>
                 <div class="list-all-film">
                     <h3 class=""><span>Lịch chiếu</span></h3>
                     <ul class="pagination pagination-lg schedule">

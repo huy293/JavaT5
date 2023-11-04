@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    background-color: rgb(43, 41, 41);
+    background-color: #262a2c;
     color: white;
 }
 label{
@@ -11,20 +11,36 @@ label{
     margin-bottom: 5px;
     display: inline-block;
 }
+h1,h2,h3,h4,h5,h6{
+    color: var(--brand);
+    padding: 5px 15px;
+}
+header, header .container{
+    background-color: #1e2122;
+}
+.dd{
+    background-color: #181a1b;
+    padding: 10PX;
+    font-size: 17px;
+    color: var(--body);
+    width: 100%;
+    margin-top: 10px;
+}
 .container {
     padding-right: 10px;
     padding-left: 10px;
     margin-right: auto;
     margin-left: auto;
-    width: 1000px;
+    width: 1100px;
     max-width: 100%;
-    background-color: #1B1D1F;
+    background-color: #262a2c;
 }
 .navbar{
-    background-color: #161819; 
+    background-color: #1B1D1F; 
+    height: 8vh;
 }
 .navbar .navbar-brand{
-    color:white
+    color:var(--brand1);
 }
 .form-inline{
     display: inline-block;
@@ -35,7 +51,6 @@ label{
 .form-control{
     background: #181a1b;
     border: gold;
-    width: 100%;
     padding: 8px 12px;
     border-radius: 5px;
     color: whitesmoke;
@@ -47,6 +62,7 @@ label{
     border: 1px solid white;
     border-radius: 5px;
     width: 100%;
+    background-color: #151718;
 }
 .list-search{
     width: 130px;
@@ -65,7 +81,7 @@ label{
 .btn-filter-movie{
     border-radius: 5px;
     border-color: white;
-    box-shadow: inset 0 1px 1px rgba(223, 230, 9, 0.75);
+    box-shadow: inset 1px 1px 1px var(--brand);
     transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
     color: white;
     margin-top: 29px;
@@ -82,7 +98,7 @@ a:hover{
     color: white;
 }
 .movie{
-    padding: 0px;
+    padding: 5px;
 }
 
 .movie-item{
@@ -103,7 +119,6 @@ a:hover{
     opacity: 0;
 }   
 .movie-item:hover .movie-meta{
-    opacity: 1;
     bottom: 0px;
     background-color: var(--bg2);
     opacity: 0.75;
@@ -130,6 +145,7 @@ a:hover{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .count-page a{
@@ -177,7 +193,21 @@ a:hover{
     background-color: var(--brand);
     color: var(--bg2);
 }
-
+.toolbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    background-color: #1e2122;
+}
+.toolbar a{
+    padding: 15px;
+    font-size: 18px;
+}
+.toolbar a:hover{
+    background-color: var(--bg2);
+    color: var(--brand);
+}
 .content{
     border:1px solid var(--brand1);
     width: 100%;
@@ -197,6 +227,10 @@ a:hover{
     color: whitesmoke;
     right: 0;
     top: 0;
+}
+.listall{
+    background-color: #151718;
+    margin-top: 10px;
 }
 .content .list-top-movie-item-info{
     display: flex;
@@ -234,6 +268,7 @@ footer .social-links a{
     padding-bottom: 20px;
     border-top: 1px solid var(--brand);
 }
+
 .social-links a{
     width: 42px;
     height: 42px;
@@ -242,82 +277,130 @@ footer .social-links a{
     align-items: center;
     justify-content: center;
 }
+
 .social-links a:hover {
     background-color: var(--brand);
     color: var(--bg2);
 }
 .col-lg-8{
     min-height: 100vh;
-}
-
-.form-login{
-    margin: 20px;
-    background-color: #404048;
-}
-.form-login .form-text,
-.form-login .form-input{
-    margin: 15px;
-}
-.form-login .form-text{
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-}
-.form-login .form-input{
-    width: 250px;
-    height: 30px;
-}
-.form-login .form-submit{
-    padding: 10px 9px;
-    transition: all 0.7s ease;
-    margin-left: 15px;
     margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: transparent;
-    color:white;
-    border-color: var(--body);
 }
-.form-login .form-submit:hover{
-    background-color: white;
-    color: var(--body);
+.list-all-film{
+    background-color: #151718;
+    margin-top: 10px;
+    clear: left;
+}
+.col-lg-4{
+    padding-left: 10px;
+    margin-top: 10px;
 }
 
-.form-signup{
-    margin: 20px;
-    background-color: #404048;
+
+
+
+/*inf*/
+.inf-all{
+    background-color: #181a1b;
+    margin-top: 10px;
+    overflow: auto;
 }
-.form-signup .form-text,
-.form-signup .form-input{
-    margin: 15px;
+.inf-all .inf-avt-link-item-img{
+    float:left;
+    padding: 8px 10px;
+    object-fit: cover;
+    width: 50%;
+    position: relative;
 }
-.form-signup .form-text{
+.inf-avt-link-item-img .inf-btn{
+    background-color: var(--bg1);
+    opacity: 0.9;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 10px;
+}
+.inf-btn .btnpd{
+    margin: 20px 8px;
+}
+.inf-all .inf-avt-link-item{
+    float: left;
+    width: 50%;
+}
+.inf-avt-link-item-img .imgh{
+    width: 100%;
+}
+.inf-all .inf-avt-link-item-status,
+.inf-all .inf-avt-link-item-tap{
+    border: 1px solid var(--brand);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+.inf-avt-link-item-name h3{
+    margin: 0px;
+    padding: 0px;
+}
+.inf-avt-link-item-name .nho{
     font-size: 15px;
-    font-weight: bold;
-    color: white;
+    color: #a8a094;
+    font-weight: lighter;
 }
-.form-signup .form-input{
-    width: 250px;
-    height: 22.5px;
+.inf-avt-link-item-tap .inf-avt-link-item-tap-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
-.form-signup .form-submit{
-    padding: 8px 8px;
-    transition: all 0.7s ease;
-    margin-left: 15px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: transparent;
-    color:white;
-    border-color: var(--body);
-}
-.form-signup .form-submit:hover{
-    background-color: white;
+.inf-avt-link-item-tap-list a{
+    background-color: var(--bg2);
     color: var(--body);
+    padding: 10px 15px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+.inf-film{
+    clear: left;  
+    padding-top:10px ;
+}
+.inf-film hr{
+    color: var(--brand);
+}
+
+.inf-avt-link-item-tap-list a:hover{
+    background-color: var(--brand);
+    color: var(--bg2);
+    transform-origin: 10%;
 }
 
 
 
 
 
-
-
+.count-tapfilm{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #151718;
+    padding: 10px;
+}
+.count-tapfilm a{
+    padding: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: var(--bg2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.count-tapfilm a:hover{
+    background-color: var(--brand);
+    color: var(--bg2);
+}
 /* admin */

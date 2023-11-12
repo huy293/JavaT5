@@ -49,39 +49,8 @@
       </div>
     </header>
 
-  <!-- Swiper -->
   <div id="home" class=container>
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-            <div class="swiper-slide"><a href="#"><img src="https://i.mpcdn.top/c/Wq0KLPr/du-bao-tinh-yeu.jpg?1699609742" alt="Image 1"></a></div>
-              <div class="swiper-slide"><a href="#"><img src="https://i.mpcdn.top/c/00krbwP/bat-kha-chien-bai.jpg?1699606683" alt="Image 2"></a></div>
-              <div class="swiper-slide"><a href="#"><img src="https://i.mpcdn.top/c/nYKo8jB/dai-chien-titan-phan-6.jpg?1699537066" alt="Image 3"></a></div>
-              <div class="swiper-slide"><a href="#"><img src="https://i.mpcdn.top/c/oKQQydX/los-billis.jpg?1699029718" alt="Image 4"></a></div>
-              <div class="swiper-slide"><a href="#"><img src="https://i.mpcdn.top/c/Qlmmv52/upload-phan-2.jpg?1699027690" alt="Image 5"></a></div>
-              <div class="swiper-slide"><a href="#"><img src="https://i.mpcdn.top/c/LRMMBKB/samurai-mat-xanh.jpg?1699026003" alt="Image 6"></a></div>
-              <div class="swiper-slide"><a href="#"><img src="https://i.mpcdn.top/c/MQZZAO0/sieu-thi-sangjangdol.jpg?1699000978" alt="Image 7"></a></div>
-              <div class="swiper-slide"><a href="#"><img src="https://i.mpcdn.top/c/w5KvM5p/hoc-vien-ki-lan.jpg?1698931531" alt="Image 8"></a></div>
-              <div class="swiper-slide"><a href="#"><img src="https://i.mpcdn.top/c/Jg93LAj/tro-choi-nghin-ty.jpg?1697987479" alt="Image 9"></a></div>
-    </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-    var swiper = new Swiper(".mySwiper", {
-      rewind: true,
-      slidesPerView: 5,
-      spaceBetween: 30,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-    });
-    </script>
+  
   
       <div class="search">
         <form id="form-filter" class="form-inline" method="GET" action="">
@@ -145,14 +114,13 @@
             <button type="submit" id="btn-movie-filter" class="btn btn-blue btn-filter-movie"><span>Áp dụng</span></button>
         </form>
     </div>
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+        <li class="breadcrumb-item"><a href="#">Lọc</a></li>
+      </ul>
     <div class="row">
-      <div class="col-lg-8">
-          <div class="list-all-film">
-            <div class="pa-title">
-                <a href="#"><div class="pa-title-item active">Phim bộ mới cập nhật</div></a>
-                <a href="#"><div class="pa-title-item">Phim lẻ mới cấp nhật</div></a>
-                <a href="#"><div class="pa-title-item">Phim đã hoàn thành</div></a>
-            </div>
+      <div class="col-lg-8"style="margin-top: 0px;">
+          <div class="list-all-film" style="margin-top: 0px;">
               <div class="row" style="margin-left: 0px;margin-right: 0px;">
                   <div class ="movie col-lg-3 col-md-6">
                       <a href="Inf.html">
@@ -177,45 +145,10 @@
                 <a href="" class="paitem">5</a>
                 <a href="">>></a>
           </div>
-          
-          <div class="list-all-film">
-            <a href="#"><div class="pa-title-item-1">Phim hoạt hình</div></a>
-              <div class="row" style="margin-left: 0px;margin-right: 0px;">
-              <div class ="movie col-lg-3 col-md-6">
-                  <a href="">
-                  <div class="movie-item text-center">
-                      <img class="imgh" src="https://imgur-com.cdn.ampproject.org/i/imgur.com/RDeXgyn.jpg" alt="">
-                      <div class="movie-meta">
-                          <div class="movie-name">Tên anime</div>
-                          <p class="p1">Số cmt</i></p>
-                          <p class="p2">Số view</i></p>
-                      </div>
-                  </div>
-                  </a>
-              </div>
-              </div>
-          </div>
-          <div class="list-all-film">
-            <a href="#"><div class="pa-title-item-1">Được yêu thích</div></a>
-              <div class="row" style="margin-left: 0px;margin-right: 0px;">
-              <div class ="movie col-lg-3 col-md-6">
-                  <a href="">
-                  <div class="movie-item text-center">
-                      <img class="imgh" src="https://imgur-com.cdn.ampproject.org/i/imgur.com/RDeXgyn.jpg" alt="">
-                      <div class="movie-meta">
-                          <div class="movie-name">Tên anime</div>
-                          <p class="p1">Số cmt</i></p>
-                          <p class="p2">Số view</i></p>
-                      </div>
-                  </div>
-                  </a>
-              </div>
-              </div>
-          </div>
       </div>
       <div class="col-lg-4">
-          <div class="listall">
-            <a href="#"><div class="pa-title-item-2">Phim sắp chiếu</div></a>
+          <div class="listall" style="margin-top: 0px;">
+            <a href="#"><div class="pa-title-item-2" style="margin-top: 0px;">Phim sắp chiếu</div></a>
               <div class="content">
                   <a title="Goblin Slayer 2nd Season | ゴブリンスレイヤーⅡ - Goblin Slayer II" href="/phim/goblin-slayer-ii/m9141.html">
                       <span class="status">04/??</span>

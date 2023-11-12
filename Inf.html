@@ -8,13 +8,15 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style1.css">
     <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Phim hentai</title>
 </head>
 <body>
     <div class="fbody">
-    <nav id="home" class="navbar navbar-light">
+      <nav id="home" class="navbar">
         <div class="container">
-          <a class="navbar-brand" href="#">Tổ 5</a>
+          <a class="navbar-brand" href="#"><img src="img/a.jpg" alt=""></a>
           <div></div>
           <form class="d-flex">
             <input class="form-search form-control ms-5 me-2" type="search" placeholder="Search" aria-label="Search">
@@ -24,23 +26,24 @@
             <input class="btn btn-outline-light openl" id="bt" type="button" value="Login">
             
             <input class="btn btn-outline-light opens" id="btn2" type="button" value="Sign Up">
-          </div>          
+          </div> 
         </div>
-    </nav>
+    </nav>        
+    
     <header>
-        <div class="container">
-            <div class="toolbar">
-                <a href="#">Trang chủ</a>
-                <a href="#">Thể loại</a>
-                <a href="#">Phim mới</a>
-                <a href="#">Phim lẻ</a>
-                <a href="#">Phim bộ</a>
-                <a href="#">Phim lẻ</a>
-                <a href="#">Phim thuyết minh</a>
-                <a href="#">Phim chiếu rạp</a>
-                <a href="#">TV show</a>
-            </div>
-        </div>
+      <div class="container">
+          <div class="toolbar">
+              <a href="#">Trang chủ</a>
+              <a href="#">Thể loại</a>
+              <a href="#">Phim mới</a>
+              <a href="#">Phim lẻ</a>
+              <a href="#">Phim bộ</a>
+              <a href="#">Phim lẻ</a>
+              <a href="#">Phim thuyết minh</a>
+              <a href="#">Phim chiếu rạp</a>
+              <a href="#">TV show</a>
+          </div>
+      </div>
     </header>
     <div id="home" class="container">
         <div class="row">
@@ -87,107 +90,71 @@
                     <iframe width="100%" height="400" src="https://poe.com/chat/2oqsmch0o7licjipu5b"></iframe>
                   </div>
                 </div>
-                <div class="list-all-film">
-                    <h3 class=""><span>Lịch chiếu</span></h3>
-                    <ul class="pagination pagination-lg schedule">
-                        <li class="active"><a rel="nofollow">Thứ 2</a></li>
-                        <li><a href="">Thứ 3</a></li>
-                        <li><a href="">Thứ 4</a></li>
-                        <li><a href="">Thứ 5</a></li>
-                        <li><a href="">Thứ 6</a></li>
-                        <li><a href="">Thứ 7</a></li>
-                        <li><a href="">Chủ nhật</a></li></ul>
-                    <div class="row">
-                    <div class ="movie col-lg-3 col-md-6">
-                        <a href="">
-                        <div class="movie-item text-center">
-                            <img class="imgh" src="https://imgur-com.cdn.ampproject.org/i/imgur.com/RDeXgyn.jpg" alt="">
-                            <div class="movie-meta">
-                                <div class="movie-name">Tên anime</div>
-                                <p class="p1">Số cmt</i></p>
-                                <p class="p2">Số view</i></p>
-                            </div>
-                        </div>
-                        </a>
-                    </div>
-                    </div>
+                <div class="swiper mySwiper" style="margin-top: 20px;">
+                  <div class="swiper-wrapper">
+                          <div class="swiper-slide"><a href="#"><img src="https://i.mpcdn.top/c/Wq0KLPr/du-bao-tinh-yeu.jpg?1699609742" alt="Image 1"></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="https://i.mpcdn.top/c/00krbwP/bat-kha-chien-bai.jpg?1699606683" alt="Image 2"></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="https://i.mpcdn.top/c/nYKo8jB/dai-chien-titan-phan-6.jpg?1699537066" alt="Image 3"></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="https://i.mpcdn.top/c/oKQQydX/los-billis.jpg?1699029718" alt="Image 4"></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="https://i.mpcdn.top/c/Qlmmv52/upload-phan-2.jpg?1699027690" alt="Image 5"></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="https://i.mpcdn.top/c/LRMMBKB/samurai-mat-xanh.jpg?1699026003" alt="Image 6"></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="https://i.mpcdn.top/c/MQZZAO0/sieu-thi-sangjangdol.jpg?1699000978" alt="Image 7"></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="https://i.mpcdn.top/c/w5KvM5p/hoc-vien-ki-lan.jpg?1698931531" alt="Image 8"></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="https://i.mpcdn.top/c/Jg93LAj/tro-choi-nghin-ty.jpg?1697987479" alt="Image 9"></a></div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
                 </div>
+                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+              <script>
+                  var swiper = new Swiper(".mySwiper", {
+                    rewind: true,
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                    navigation: {
+                      nextEl: ".swiper-button-next",
+                      prevEl: ".swiper-button-prev",
+                    },
+                    autoplay: {
+                      delay: 2500,
+                      disableOnInteraction: false,
+                    },
+                  });
+                  </script>
             </div>
             <div class="col-lg-4">
-                <div class="listall">
-                    <h3><span>Xem Nhiều Nhất</span></h3>
-                    <span class="name">
-                        <a title="Day" href="DAY">Ngày</a>
-						<a title="DAY" rel="nofollow" href="DAY">Tuần</a>
-						<a title="MONTH" rel="nofollow" href="MONTH">Tháng</a>
-						<a title="MUA" rel="nofollow" href="YEAR">Mùa</a>
-						<a title="YEAR" rel="nofollow" href="ALL">Năm</a>
-					</span>
-                    <div class="content">
-                        <a title="Goblin Slayer 2nd Season | ゴブリンスレイヤーⅡ - Goblin Slayer II" href="/phim/goblin-slayer-ii/m9141.html">
-                            <span class="status">04/??</span>
-                            <div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/WyD8zAy.jpg')"></div>
-                            <div class="list-top-movie-item-info">
-                                <span class="list-top-movie-item-vn">Goblin Slayer II</span>
-                                <span class="list-top-movie-item-en"> Goblin Slayer ...</span>
-                                <span class="list-top-movie-item-view">1200 Lượt xem</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+              <div class="listall">
+                <a href="#"><div class="pa-title-item-2">Phim sắp chiếu</div></a>
+                  <div class="content">
+                      <a title="Goblin Slayer 2nd Season | ゴブリンスレイヤーⅡ - Goblin Slayer II" href="/phim/goblin-slayer-ii/m9141.html">
+                          <span class="status">04/??</span>
+                          <div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/WyD8zAy.jpg')"></div>
+                          <div class="list-top-movie-item-info">
+                              <span class="list-top-movie-item-vn">Goblin Slayer II</span>
+                              <span class="list-top-movie-item-en"> Goblin Slayer ...</span>
+                              <span class="list-top-movie-item-view">1200 Lượt xem</span>
+                          </div>
+                      </a>
+                  </div>
+              </div>
                 
-                <div class="listall">
-                    <h3><span>Bình luận nhiều</span></h3>
-                    <div class="content">
-                        <a title="Shadow Garden 2nd Season | 陰の実力者になりたくて！ 2nd Season | The Eminence in Shadow Season 2 - Kage no Jitsuryokusha ni Naritakute! 2nd Season" href="/phim/kage-no-jitsuryokusha-ni-naritakute-2nd-season/m9142.html">
-                            <span class="status">04/??</span>
-                            <div class="list-top-movie-item-thumb" style="background-image: url('https://imgur-com.cdn.ampproject.org/i/imgur.com/nZu9ClH.jpg')"></div>
-                            <div class="list-top-movie-item-info"><span class="list-top-movie-item-vn">Kage no Jitsuryokusha ni Naritakute! 2nd Season</span><span class="list-top-movie-item-en"> Shadow Garden ...</span><span class="list-top-movie-item-view">114525 Lượt xem</span></div>
-                        </a>        
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
 
-<footer>
-    <div class="footer-top">
-        <div class="container">
-            <div class="row ">
-                <div class="col-lg-4">
-                    <h3 class="mb-3">Tổ 5</h3>
-                    <div class="social-links">
-                        <a href="#">F</a>
-                        <a href="#">G</i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <h4 class="mb-3">Liên hệ</h4>
-                    <p>
-                        <i class="ri-phone-fill "></i>
-                        <span>0258 3837 485</span>
-                    </p>
-                    <p>
-                        <i class="ri-mail-fill "></i>
-                        <span>khanhhoa@tdtu.edu.vn</span>
-                    </p>
-                </div>
-            </div>
+    <footer>
+      <div class="container">
+          <div class="row justify-content-between">
+              <div class="col-auto">
+                  <p>Copyrights @Tổ 5. All Rights reserved</p>
+              </div>
+              <div class="col-auto">
+                  <p>Designed by <a href="#">Khang Huy</a></p>
+              </div>
+          </div>
         </div>
-    </div>
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-auto">
-                    <p>Copyrights @Tổ 5. All Rights reserved</p>
-                </div>
-                <div class="col-auto">
-                    <p>Designed by <a href="#">Khang Huy</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+    </footer>
 </div>
 <div id="login" class="bg-img">
     <div class="contenlogin">
